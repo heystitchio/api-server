@@ -27,6 +27,7 @@
   "homepage": "https://github.com/apollostack/apollo-starter-kit#readme",
   "dependencies": {
     "apollo-server": "^0.3.3",
+    "babel-plugin-inline-import": "^2.0.4",
     "bcrypt": "^1.0.2",
     "body-parser": "^1.15.2",
     "casual": "^1.5.8",

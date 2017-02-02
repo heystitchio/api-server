@@ -1,10 +1,9 @@
 import express from 'express';
-import Schema from './data/schema';
-import Resolvers from './data/resolvers';
-// *** TEST ONLY ***
-import { apolloServer } from 'graphql-tools';
+
 import Schema from './data/schema';
 import Mocks from './data/mocks';
+import Resolvers from './data/resolvers';
+import Connectors from './data/connectors';
 
 import { apolloExpress, graphiqlExpress } from 'apollo-server';
 import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools';
