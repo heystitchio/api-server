@@ -2,6 +2,8 @@ import express from 'express';
 import Schema from './data/schema';
 import Resolvers from './data/resolvers';
 // *** TEST ONLY ***
+import { apolloServer } from 'graphql-tools';
+import Schema from './data/schema';
 import Mocks from './data/mocks';
 
 import { apolloExpress, graphiqlExpress } from 'apollo-server';
@@ -30,6 +32,10 @@ addMockFunctionsToSchema({
 graphQLServer.use('/data', bodyParser.json(), apolloExpress({
   schema: executableSchema,
   context: {},
+  graphiql: true,
+  pretty: true,
+  schema: Schema,
+  mocks: Mocks,
 }));
 
 graphQLServer.use('/graphiql', graphiqlExpress({
